@@ -2,10 +2,14 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
     <title>Maracatu Kangoma</title>
+
 
     <style>
 
@@ -15,9 +19,11 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -25,12 +31,15 @@
             color: #fff;
         }
 
-        /* =========================
+
+        /* =====================================================
            MENU LATERAL
-        ========================= */
+        ===================================================== */
 
         .menu {
+
             position: fixed;
+
             left: 0;
             top: 0;
 
@@ -38,6 +47,7 @@
             height: 100vh;
 
             background: #000;
+
             border-right: 4px solid #ffd000;
 
             display: flex;
@@ -49,58 +59,86 @@
             z-index: 1000;
         }
 
+
+        /* =====================================================
+           LOGO DO MENU
+        ===================================================== */
+
         .logo-menu {
+
             width: 150px;
             height: 150px;
 
             border: 4px solid #ffd000;
+
             border-radius: 50%;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: #fff;
 
-            background: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
             overflow: hidden;
 
             margin-bottom: 25px;
         }
 
+
+        /*
+           A logo original é retangular.
+           Ela precisa ficar menor que o círculo para
+           que seus quatro cantos também fiquem dentro
+           da área circular.
+        */
+
         .logo-menu img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+
+            width: 72%;
+            height: 72%;
+
+            object-fit: contain;
+
+            object-position: center;
+
+            display: block;
         }
 
-        .logo-menu span {
-            color: #ffd000;
-            text-align: center;
-            font-weight: bold;
-            font-size: 14px;
-        }
 
         .menu h2 {
+
             color: #ffd000;
+
             font-size: 23px;
+
             letter-spacing: 2px;
+
             text-align: center;
+
             margin-bottom: 40px;
         }
 
+
         .menu ul {
+
             list-style: none;
+
             width: 100%;
         }
 
+
         .menu li {
+
             margin-bottom: 10px;
         }
 
+
         .menu a {
+
             display: block;
 
             color: #fff;
+
             text-decoration: none;
 
             padding: 14px 18px;
@@ -112,58 +150,82 @@
             transition: 0.3s;
         }
 
+
         .menu a:hover {
+
             background: #ffd000;
+
             color: #000;
+
             border-left: 4px solid #fff;
         }
 
-        /* REDES SOCIAIS */
+
+        /* =====================================================
+           REDES SOCIAIS
+        ===================================================== */
 
         .redes {
+
             margin-top: auto;
+
             display: flex;
+
             gap: 15px;
         }
 
+
         .redes a {
+
             color: #ffd000;
+
             font-size: 14px;
+
             padding: 5px;
         }
 
+
         .redes a:hover {
+
             background: transparent;
+
             color: #fff;
+
             border: none;
         }
 
 
-        /* =========================
+        /* =====================================================
            CONTEÚDO PRINCIPAL
-        ========================= */
+        ===================================================== */
 
         main {
+
             margin-left: 250px;
         }
 
 
-        /* =========================
+        /* =====================================================
            HERO
-        ========================= */
+        ===================================================== */
 
         .hero {
+
             min-height: 100vh;
 
             background:
+
                 linear-gradient(
                     rgba(0, 0, 0, 0.82),
                     rgba(0, 0, 0, 0.82)
                 ),
+
                 #171717;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             text-align: center;
@@ -171,43 +233,68 @@
             padding: 50px;
         }
 
+
         .hero-content {
+
             max-width: 900px;
         }
 
+
+        /* =====================================================
+           LOGO PRINCIPAL
+        ===================================================== */
+
         .logo-principal {
+
             width: 230px;
             height: 230px;
 
             margin: 0 auto 30px;
 
             border: 5px solid #ffd000;
+
             border-radius: 50%;
 
-            background: #111;
+            background: #fff;
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             overflow: hidden;
 
-            box-shadow: 0 0 30px rgba(255, 208, 0, 0.25);
+            box-shadow:
+                0 0 30px rgba(255, 208, 0, 0.25);
         }
+
+
+        /*
+           IMPORTANTE:
+
+           72% faz a imagem ficar completamente
+           dentro do círculo.
+
+           Não usamos width: 100%, pois os cantos
+           da imagem seriam cortados pelo círculo.
+        */
 
         .logo-principal img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+
+            width: 72%;
+            height: 72%;
+
+            object-fit: contain;
+
+            object-position: center;
+
+            display: block;
         }
 
-        .logo-principal span {
-            color: #ffd000;
-            font-size: 18px;
-            font-weight: bold;
-        }
 
         .hero h1 {
+
             font-size: clamp(45px, 7vw, 85px);
 
             color: #ffd000;
@@ -219,13 +306,19 @@
             margin-bottom: 20px;
         }
 
+
         .hero p {
+
             font-size: 21px;
+
             line-height: 1.6;
+
             color: #fff;
         }
 
+
         .botao {
+
             display: inline-block;
 
             margin-top: 30px;
@@ -233,6 +326,7 @@
             padding: 15px 32px;
 
             background: #ffd000;
+
             color: #000;
 
             text-decoration: none;
@@ -244,21 +338,27 @@
             transition: 0.3s;
         }
 
+
         .botao:hover {
+
             background: #fff;
+
             transform: translateY(-3px);
         }
 
 
-        /* =========================
+        /* =====================================================
            SEÇÕES
-        ========================= */
+        ===================================================== */
 
         section {
+
             padding: 90px 10%;
         }
 
+
         .titulo {
+
             text-align: center;
 
             color: #ffd000;
@@ -273,20 +373,26 @@
         }
 
 
-        /* =========================
+        /* =====================================================
            SOBRE
-        ========================= */
+        ===================================================== */
 
         #sobre {
+
             background: #ffd000;
+
             color: #000;
         }
+
 
         #sobre .titulo {
+
             color: #000;
         }
 
+
         .sobre-conteudo {
+
             max-width: 900px;
 
             margin: auto;
@@ -299,18 +405,22 @@
         }
 
 
-        /* =========================
+        /* =====================================================
            CULTURA
-        ========================= */
+        ===================================================== */
 
         #cultura {
+
             background: #080808;
         }
 
+
         .cards {
+
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns:
+                repeat(3, 1fr);
 
             gap: 25px;
 
@@ -319,7 +429,9 @@
             margin: auto;
         }
 
+
         .card {
+
             background: #111;
 
             border: 2px solid #ffd000;
@@ -333,14 +445,19 @@
             transition: 0.3s;
         }
 
+
         .card:hover {
+
             background: #ffd000;
+
             color: #000;
 
             transform: translateY(-8px);
         }
 
+
         .card h3 {
+
             color: #ffd000;
 
             margin-bottom: 15px;
@@ -348,41 +465,54 @@
             font-size: 24px;
         }
 
+
         .card:hover h3 {
+
             color: #000;
         }
 
+
         .card p {
+
             color: #ddd;
 
             line-height: 1.6;
         }
 
+
         .card:hover p {
+
             color: #000;
         }
 
 
-        /* =========================
+        /* =====================================================
            MÚSICAS
-        ========================= */
+        ===================================================== */
 
         #musicas {
+
             background: #000;
         }
 
+
         .musicas-container {
-            max-width: 1000px;
+
+            max-width: 1100px;
+
             margin: auto;
 
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns:
+                repeat(3, 1fr);
 
             gap: 25px;
         }
 
+
         .musica {
+
             background: #111;
 
             border: 2px solid #ffd000;
@@ -396,14 +526,19 @@
             position: relative;
         }
 
+
         .musica:hover {
+
             transform: translateY(-7px);
 
             box-shadow:
-                0 10px 30px rgba(255, 208, 0, 0.15);
+                0 10px 30px
+                rgba(255, 208, 0, 0.15);
         }
 
+
         .musica h3 {
+
             color: #ffd000;
 
             font-size: 25px;
@@ -417,7 +552,41 @@
             letter-spacing: 1px;
         }
 
+
+        /* =====================================================
+           IMAGEM DA MÚSICA
+        ===================================================== */
+
+        .imagem-musica {
+
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+
+            margin: 0 auto 25px;
+
+            border: 2px solid #ffd000;
+
+            border-radius: 5px;
+
+            transition: 0.3s;
+        }
+
+
+        .imagem-musica:hover {
+
+            transform: scale(1.02);
+
+            box-shadow:
+                0 8px 25px
+                rgba(255, 208, 0, 0.2);
+        }
+
+
         .letra {
+
             color: #ddd;
 
             font-size: 17px;
@@ -429,12 +598,15 @@
             text-align: center;
         }
 
+
         .musica::before {
+
             content: "♪";
 
             position: absolute;
 
             top: 12px;
+
             right: 18px;
 
             color: #ffd000;
@@ -443,19 +615,24 @@
         }
 
 
-        /* =========================
+        /* =====================================================
            GALERIA
-        ========================= */
+        ===================================================== */
 
         #galeria {
+
             background: #ffd000;
         }
 
+
         #galeria .titulo {
+
             color: #000;
         }
 
+
         .galeria {
+
             max-width: 1200px;
 
             margin: auto;
@@ -465,7 +642,9 @@
             column-gap: 20px;
         }
 
+
         .foto {
+
             width: 100%;
 
             margin-bottom: 20px;
@@ -483,10 +662,13 @@
             cursor: pointer;
         }
 
+
         .foto img {
+
             display: block;
 
             width: 100%;
+
             height: auto;
 
             transition:
@@ -494,25 +676,32 @@
                 filter 0.5s ease;
         }
 
+
         .foto:hover img {
+
             transform: scale(1.06);
 
             filter: brightness(1.15);
         }
 
+
         .foto::after {
+
             content: "🔍";
 
             position: absolute;
 
             right: 12px;
+
             bottom: 12px;
 
-            background: rgba(0, 0, 0, 0.75);
+            background:
+                rgba(0, 0, 0, 0.75);
 
             color: #ffd000;
 
             width: 38px;
+
             height: 38px;
 
             border-radius: 50%;
@@ -520,6 +709,7 @@
             display: flex;
 
             align-items: center;
+
             justify-content: center;
 
             opacity: 0;
@@ -527,17 +717,19 @@
             transition: 0.3s;
         }
 
+
         .foto:hover::after {
+
             opacity: 1;
         }
 
 
-        /* =========================
-           MÚSICAS E GALERIA
+        /* =====================================================
            LIGHTBOX
-        ========================= */
+        ===================================================== */
 
         .lightbox {
+
             display: none;
 
             position: fixed;
@@ -545,38 +737,52 @@
             z-index: 3000;
 
             left: 0;
+
             top: 0;
 
             width: 100%;
+
             height: 100%;
 
-            background: rgba(0, 0, 0, 0.95);
+            background:
+                rgba(0, 0, 0, 0.95);
 
             justify-content: center;
+
             align-items: center;
 
             padding: 30px;
         }
 
+
         .lightbox.active {
+
             display: flex;
         }
 
+
         .lightbox img {
+
             max-width: 95%;
+
             max-height: 90vh;
 
             object-fit: contain;
 
             border: 4px solid #ffd000;
 
-            box-shadow: 0 0 40px rgba(255, 208, 0, 0.25);
+            box-shadow:
+                0 0 40px
+                rgba(255, 208, 0, 0.25);
         }
 
+
         .fechar {
+
             position: absolute;
 
             top: 20px;
+
             right: 35px;
 
             color: #ffd000;
@@ -589,30 +795,54 @@
         }
 
 
-        /* =========================
+        /* =====================================================
            CONTATO
-        ========================= */
+        ===================================================== */
 
         #contato {
+
             background: #080808;
 
             text-align: center;
         }
 
+
         .contato-texto {
+
             color: #ddd;
 
             font-size: 19px;
 
-            line-height: 1.8;
+            line-height: 2;
         }
 
 
-        /* =========================
+        .contato-link {
+
+            color: #ffd000;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+
+        .contato-link:hover {
+
+            color: #fff;
+
+            text-decoration: underline;
+        }
+
+
+        /* =====================================================
            RODAPÉ
-        ========================= */
+        ===================================================== */
 
         footer {
+
             background: #000;
 
             border-top: 2px solid #ffd000;
@@ -624,51 +854,71 @@
             color: #aaa;
         }
 
+
         footer strong {
+
             color: #ffd000;
         }
 
 
-        /* =========================
+        /* =====================================================
            RESPONSIVO
-        ========================= */
+        ===================================================== */
 
         @media (max-width: 1000px) {
 
             .musicas-container {
+
                 grid-template-columns: 1fr;
             }
-
         }
 
 
         @media (max-width: 800px) {
 
             .menu {
+
                 position: relative;
 
                 width: 100%;
+
                 height: auto;
 
                 border-right: none;
 
-                border-bottom: 4px solid #ffd000;
+                border-bottom:
+                    4px solid #ffd000;
 
                 padding: 20px;
             }
 
+
             .logo-menu {
-                width: 110px;
-                height: 110px;
+
+                width: 130px;
+
+                height: 130px;
 
                 margin-bottom: 15px;
             }
+
+
+            .logo-menu img {
+
+                width: 72%;
+
+                height: 72%;
+            }
+
 
             .menu h2 {
+
                 margin-bottom: 15px;
             }
 
+
             .menu ul {
+
                 display: flex;
 
                 flex-wrap: wrap;
@@ -678,58 +928,91 @@
                 gap: 5px;
             }
 
+
             .menu li {
+
                 margin: 0;
             }
 
+
             .menu a {
+
                 padding: 10px 12px;
             }
 
+
             .redes {
+
                 margin-top: 15px;
             }
 
+
             main {
+
                 margin-left: 0;
             }
 
+
             .hero {
+
                 min-height: 90vh;
 
                 padding: 30px 20px;
             }
 
+
             .logo-principal {
-                width: 180px;
-                height: 180px;
+
+                width: 200px;
+
+                height: 200px;
             }
 
+
+            .logo-principal img {
+
+                width: 72%;
+
+                height: 72%;
+            }
+
+
             .cards {
+
                 grid-template-columns: 1fr;
             }
 
+
             section {
+
                 padding: 60px 7%;
             }
 
+
             .titulo {
+
                 font-size: 30px;
             }
 
+
             .galeria {
+
                 columns: 2 180px;
 
                 column-gap: 12px;
             }
 
+
             .foto {
+
                 margin-bottom: 12px;
 
                 border-width: 3px;
             }
 
+
             .musica {
+
                 padding: 25px 20px;
             }
 
@@ -739,162 +1022,215 @@
         @media (max-width: 500px) {
 
             .galeria {
+
                 columns: 1;
             }
 
+
             .hero h1 {
+
                 letter-spacing: 2px;
+            }
+
+
+            .logo-principal {
+
+                width: 180px;
+
+                height: 180px;
+            }
+
+
+            .logo-menu {
+
+                width: 115px;
+
+                height: 115px;
             }
 
         }
 
     </style>
+
 </head>
 
 
 <body>
 
 
-    <!-- =========================
-         MENU LATERAL
-    ========================= -->
+    <!-- =====================================================
+         MENU
+    ===================================================== -->
 
     <aside class="menu">
 
+
         <div class="logo-menu">
 
-            <!--
-                COLOQUE SUA LOGO AQUI:
-
-                <img src="images/logo.png"
-                     alt="Logo Maracatu Kangoma">
-            -->
-
-            <span>
-                SUA<br>
-                LOGO
-            </span>
+            <img
+                src="logo/kangoma.jpeg"
+                alt="Logo do Maracatu Kangoma">
 
         </div>
 
+
         <h2>KANGOMA</h2>
+
 
         <ul>
 
             <li>
-                <a href="#inicio">Início</a>
+                <a href="#inicio">
+                    Início
+                </a>
             </li>
 
             <li>
-                <a href="#sobre">Sobre</a>
+                <a href="#sobre">
+                    Sobre
+                </a>
             </li>
 
             <li>
-                <a href="#cultura">Nossa Cultura</a>
+                <a href="#cultura">
+                    Nossa Cultura
+                </a>
             </li>
 
             <li>
-                <a href="#musicas">Músicas</a>
+                <a href="#musicas">
+                    Músicas
+                </a>
             </li>
 
             <li>
-                <a href="#galeria">Carnavais</a>
+                <a href="#galeria">
+                    Carnavais
+                </a>
             </li>
 
             <li>
-                <a href="#contato">Contato</a>
+                <a href="#contato">
+                    Contato
+                </a>
             </li>
 
         </ul>
 
+
         <div class="redes">
 
-            <a href="#">Instagram</a>
+            <a
+                href="https://www.instagram.com/maracatukangoma/"
+                target="_blank"
+                rel="noopener noreferrer">
 
-            <a href="#">Facebook</a>
+                Instagram
+
+            </a>
 
         </div>
 
     </aside>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          CONTEÚDO
-    ========================= -->
+    ===================================================== -->
 
     <main>
 
 
-        <!-- =========================
+        <!-- =================================================
              INÍCIO
-        ========================= -->
+        ================================================= -->
 
-        <header class="hero" id="inicio">
+        <header
+            class="hero"
+            id="inicio">
 
             <div class="hero-content">
 
+
                 <div class="logo-principal">
 
-                    <!--
-                        Para colocar sua imagem:
-
-                        <img src="images/logo.png"
-                             alt="Logo do Maracatu Kangoma">
-                    -->
-
-                    <span>
-                        ESPAÇO<br>
-                        PARA A<br>
-                        LOGO
-                    </span>
+                    <img
+                        src="logo/kangoma.jpeg"
+                        alt="Logo do Maracatu Kangoma">
 
                 </div>
 
+
                 <h1>
+
                     Maracatu<br>
                     Kangoma
+
                 </h1>
 
+
                 <p>
+
                     Cultura, tradição, resistência
                     e ancestralidade através da
                     força do maracatu.
+
                 </p>
 
-                <a href="#sobre" class="botao">
+
+                <a
+                    href="#sobre"
+                    class="botao">
+
                     Conheça o Kangoma
+
                 </a>
+
 
             </div>
 
         </header>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              SOBRE
-        ========================= -->
+        ================================================= -->
 
         <section id="sobre">
 
             <h2 class="titulo">
+
                 Sobre o Kangoma
+
             </h2>
+
 
             <div class="sobre-conteudo">
 
                 <p>
-                    O <strong>Maracatu Kangoma</strong> é expressão
-                    de cultura, música, dança e ancestralidade.
-                    Nossa caminhada valoriza a tradição do maracatu
-                    e a força da cultura popular.
+
+                    O <strong>Maracatu Kangoma</strong>
+                    é expressão de cultura, música,
+                    dança e ancestralidade.
+
+                    Nossa caminhada valoriza a tradição
+                    do maracatu e a força da cultura popular.
+
                 </p>
+
 
                 <br>
 
+
                 <p>
-                    Através dos tambores, dos cortejos, das cores
-                    e da união da comunidade, celebramos nossas
-                    raízes e mantemos viva a nossa identidade.
+
+                    Através dos tambores, dos cortejos,
+                    das cores e da união da comunidade,
+                    celebramos nossas raízes e mantemos
+                    viva a nossa identidade.
+
                 </p>
 
             </div>
@@ -902,26 +1238,35 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              CULTURA
-        ========================= -->
+        ================================================= -->
 
         <section id="cultura">
 
             <h2 class="titulo">
+
                 Nossa Cultura
+
             </h2>
+
 
             <div class="cards">
 
+
                 <div class="card">
 
-                    <h3>🥁 Tambores</h3>
+                    <h3>
+                        🥁 Tambores
+                    </h3>
 
                     <p>
-                        O som dos tambores conduz o cortejo
-                        e representa a força e a energia
-                        do maracatu.
+
+                        O som dos tambores conduz
+                        o cortejo e representa a força
+                        e a energia do maracatu.
+
                     </p>
 
                 </div>
@@ -929,12 +1274,16 @@
 
                 <div class="card">
 
-                    <h3>👑 Tradição</h3>
+                    <h3>
+                        👑 Tradição
+                    </h3>
 
                     <p>
-                        Valorizamos a ancestralidade e os
-                        saberes transmitidos através das
-                        gerações.
+
+                        Valorizamos a ancestralidade
+                        e os saberes transmitidos
+                        através das gerações.
+
                     </p>
 
                 </div>
@@ -942,30 +1291,39 @@
 
                 <div class="card">
 
-                    <h3>✊ Resistência</h3>
+                    <h3>
+                        ✊ Resistência
+                    </h3>
 
                     <p>
+
                         O maracatu representa cultura,
                         identidade, resistência e
                         celebração coletiva.
+
                     </p>
 
                 </div>
+
 
             </div>
 
         </section>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              MÚSICAS
-        ========================= -->
+        ================================================= -->
 
         <section id="musicas">
 
             <h2 class="titulo">
+
                 Nossas Músicas
+
             </h2>
+
 
             <div class="musicas-container">
 
@@ -975,27 +1333,43 @@
                 <article class="musica">
 
                     <h3>
+
                         Cangoma Me Chamou
+
                     </h3>
 
+
+                    <img
+                        src="images/tava_durumindo.jpeg"
+                        alt="Cangoma Me Chamou"
+                        class="imagem-musica">
+
+
                     <div class="letra">
+
 Tava durumindo cangoma me chamou
 Tava durumindo cangoma me chamou
 Disse levante povo cativeiro já acabou
+
                     </div>
 
                 </article>
 
 
-                <!-- PONTO DE NANÃ -->
+
+                <!-- NANÃ -->
 
                 <article class="musica">
 
                     <h3>
+
                         Ponto de Nanã
+
                     </h3>
 
+
                     <div class="letra">
+
 Ela vem no som da chuva
 Dançando devagar seu ijexá
 Senhora da Candelária, abá
@@ -1004,9 +1378,11 @@ Pra toda a sua nação iorubá
 Sou de Nanã, euá, euá, euá, ê
 Sou de Nanã, euá, euá, euá, ê
 Sou de Nanã, euá, euá, euá, ê
+
                     </div>
 
                 </article>
+
 
 
                 <!-- PISEI NAS PEDRAS -->
@@ -1014,10 +1390,14 @@ Sou de Nanã, euá, euá, euá, ê
                 <article class="musica">
 
                     <h3>
+
                         Pisei nas Pedras
+
                     </h3>
 
+
                     <div class="letra">
+
 Eu pisei na pedra,
 A pedra no mar rolou.
 Eu pisei na pedra,
@@ -1030,6 +1410,7 @@ Santo Antônio endireitou.
 
 Ajuda eu, Santo Antônio, ajuda eu!
 Ajuda eu, Santo Antônio, ajuda eu!
+
                     </div>
 
                 </article>
@@ -1040,15 +1421,19 @@ Ajuda eu, Santo Antônio, ajuda eu!
         </section>
 
 
-        <!-- =========================
-             GALERIA DOS CARNAVAIS
-        ========================= -->
+
+        <!-- =================================================
+             GALERIA
+        ================================================= -->
 
         <section id="galeria">
 
             <h2 class="titulo">
+
                 Carnavais
+
             </h2>
+
 
             <div class="galeria">
 
@@ -1059,11 +1444,13 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu2.jpeg"
                          alt="Maracatu Kangoma - Carnaval 2"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu3.jpeg"
@@ -1071,11 +1458,13 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu4.jpeg"
                          alt="Maracatu Kangoma - Carnaval 4"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu5.jpeg"
@@ -1083,11 +1472,13 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu6.jpeg"
                          alt="Maracatu Kangoma - Carnaval 6"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu7.jpeg"
@@ -1095,11 +1486,13 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu8.jpeg"
                          alt="Maracatu Kangoma - Carnaval 8"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu9.jpeg"
@@ -1107,11 +1500,13 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu10.jpeg"
                          alt="Maracatu Kangoma - Carnaval 10"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu11.jpeg"
@@ -1119,11 +1514,13 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu12.jpeg"
                          alt="Maracatu Kangoma - Carnaval 12"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu13.jpeg"
@@ -1131,11 +1528,13 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu14.jpeg"
                          alt="Maracatu Kangoma - Carnaval 14"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu15.jpeg"
@@ -1143,11 +1542,13 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu16.jpeg"
                          alt="Maracatu Kangoma - Carnaval 16"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu17.jpeg"
@@ -1155,11 +1556,13 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu18.jpeg"
                          alt="Maracatu Kangoma - Carnaval 18"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu19.jpeg"
@@ -1167,11 +1570,13 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu20.jpeg"
                          alt="Maracatu Kangoma - Carnaval 20"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu21.jpeg"
@@ -1179,11 +1584,13 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu22.jpeg"
                          alt="Maracatu Kangoma - Carnaval 22"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu23.jpeg"
@@ -1191,17 +1598,20 @@ Ajuda eu, Santo Antônio, ajuda eu!
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu24.jpeg"
                          alt="Maracatu Kangoma - Carnaval 24"
                          onclick="abrirFoto(this.src)">
                 </div>
 
+
                 <div class="foto">
                     <img src="images/maracatu25.jpeg"
                          alt="Maracatu Kangoma - Carnaval 25"
                          onclick="abrirFoto(this.src)">
                 </div>
+
 
                 <div class="foto">
                     <img src="images/maracatu26.jpeg"
@@ -1215,77 +1625,134 @@ Ajuda eu, Santo Antônio, ajuda eu!
         </section>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              LIGHTBOX
-        ========================= -->
+        ================================================= -->
 
-        <div class="lightbox" id="lightbox">
+        <div
+            class="lightbox"
+            id="lightbox">
 
-            <span class="fechar"
-                  onclick="fecharFoto()">
+
+            <span
+                class="fechar"
+                onclick="fecharFoto()">
+
                 &times;
+
             </span>
 
-            <img id="fotoGrande"
-                 src=""
-                 alt="Foto do Maracatu Kangoma">
+
+            <img
+                id="fotoGrande"
+                src=""
+                alt="Foto do Maracatu Kangoma">
 
         </div>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              CONTATO
-        ========================= -->
+        ================================================= -->
 
         <section id="contato">
 
             <h2 class="titulo">
+
                 Entre em Contato
+
             </h2>
+
 
             <div class="contato-texto">
 
                 <p>
+
                     Quer conhecer o Maracatu Kangoma?
+
                 </p>
+
 
                 <p>
+
                     Acompanhe nossas atividades,
                     apresentações e cortejos.
+
                 </p>
 
-                <a href="#" class="botao">
-                    Nossas Redes Sociais
-                </a>
+
+                <p>
+
+                    <strong>Instagram:</strong>
+
+                    <a
+                        href="https://www.instagram.com/maracatukangoma/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="contato-link">
+
+                        @maracatukangoma
+
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    <strong>E-mail:</strong>
+
+                    <a
+                        href="mailto:kangomaoficial@gmail.com"
+                        class="contato-link">
+
+                        kangomaoficial@gmail.com
+
+                    </a>
+
+                </p>
 
             </div>
 
         </section>
 
 
-        <!-- =========================
+
+        <!-- =================================================
              RODAPÉ
-        ========================= -->
+        ================================================= -->
 
         <footer>
 
             <p>
+
                 © 2026
-                <strong>Maracatu Kangoma</strong>
+
+                <strong>
+                    Maracatu Kangoma
+                </strong>
+
                 —
+
                 Cultura, tradição e ancestralidade.
+
             </p>
 
         </footer>
 
+
     </main>
 
 
-    <!-- =========================
-         JAVASCRIPT DA GALERIA
-    ========================= -->
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ===================================================== -->
 
     <script>
+
 
         function abrirFoto(src) {
 
@@ -1295,12 +1762,17 @@ Ajuda eu, Santo Antônio, ajuda eu!
             const fotoGrande =
                 document.getElementById("fotoGrande");
 
+
             fotoGrande.src = src;
+
 
             lightbox.classList.add("active");
 
-            document.body.style.overflow = "hidden";
+
+            document.body.style.overflow =
+                "hidden";
         }
+
 
 
         function fecharFoto() {
@@ -1308,40 +1780,49 @@ Ajuda eu, Santo Antônio, ajuda eu!
             const lightbox =
                 document.getElementById("lightbox");
 
+
             lightbox.classList.remove("active");
 
-            document.body.style.overflow = "auto";
+
+            document.body.style.overflow =
+                "auto";
         }
 
 
-        /* Fecha clicando fora da imagem */
 
         document
             .getElementById("lightbox")
-            .addEventListener("click", function(event) {
+            .addEventListener(
+                "click",
+                function(event) {
 
-                if (event.target === this) {
+                    if (event.target === this) {
+
+                        fecharFoto();
+
+                    }
+
+                }
+            );
+
+
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Escape") {
 
                     fecharFoto();
 
                 }
 
-            });
-
-
-        /* Fecha pressionando ESC */
-
-        document.addEventListener("keydown", function(event) {
-
-            if (event.key === "Escape") {
-
-                fecharFoto();
-
             }
+        );
 
-        });
 
     </script>
+
 
 </body>
 
